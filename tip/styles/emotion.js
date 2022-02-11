@@ -1,1 +1,1 @@
-impo;
+import styled from "@emotion/styled";
