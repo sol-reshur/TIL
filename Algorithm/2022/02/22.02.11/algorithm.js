@@ -9,7 +9,7 @@ console.log(name); // 율무
 
 // 003 배열의 선언과 할당 - 주어진 classmate에 "율무","유자","보리"를 담아주세요.
 let classmate = ["율무", "유자", "보리"];
-console.log(classmate); // let classmate = ["율무","유자","보리"];
+console.log(classmate); // (3) ['율무', '유자', '보리']
 
 // 004 배열의 기능 - 주어진 classmate 배열에서 마지막 요소를 꺼내 newClassmate에 넣어주세요.
 let classmate = ["율무", "유자", "보리"];
