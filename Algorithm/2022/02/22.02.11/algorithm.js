@@ -23,3 +23,13 @@ let students = ["보리", "탱자", "율무", "수수"];
 let newStudents = [];
 newStudents.push(students.slice(0, 3));
 console.log(newStudents); // 0: (3) ['보리', '탱자', '율무']
+
+/* 005번의 slice는 students.slice(index.index+1)로 작성한다.
+그 이유는 slice의 시작점은 요소의 첫번째인 0부터 시작하며, 종료지점은 종료위치의 index를 포함하지않으므로,
+원하는 부분을 넣기위해선 종료지점의 index그 다음 지점을 지정해주어야 한다.
+만약 종료지점을 설정하지 않을경우 배열의 끝까지를 추출한다.
+쉽게 생각해서 slice(시작점의 index,종료점의 length)라고 생각하면 될것같다.
+
+
+
+참고: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/slice */
