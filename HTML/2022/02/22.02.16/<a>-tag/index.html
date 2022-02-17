@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <a>태그는 앵커(anchor - 닻)의 a를 따서 <a>태그 인데, 배가 정박할때 닻을 내리는것처럼 어떤 특정한 위치에서 다른곳으로 이동할수 있게하는 태그이다
+                  하이퍼링크를 만드는 태그이며, 사용빈도가 높다. 간략하게 말하면 어디로 향하는 목적지를 href 를 이용하여 명시한다.
+
+      - href : 하이퍼링크가 가르키는 URL 이다. 브라우저가 지원하는 모든 URL스킴을 사용 할수있다. CSS를 통해 스타일링 할수있다. -->
+
+    <!-- 절대경로 : 현재 위치와 관계 없이 절대값의 위치로 이동하게 함 / 어떠한 퓁페이지나 파일이 가지고 있는 고유한 경로라고 생각하면 된다.   -->
+
+    <h2>a 태그 - 하이퍼링크</h2>
+    <h3>속성 : href</h3>
+    <a href="http://www.mozilla.com">Mozilla</a>
+
+    <!-- 상대경로 : 현재위치를 기준에서 원하는 위치 (목적지)를 나태내느 경로 ( / 루트         ./ : 현재위치        ../ 현재 위치의 상위 디렉토리)
+                   ex: <a href="../../../../../README.md"> 현재는 <a>-tag 폴더의 index.html 에 있으므로   -->
+
+    <a href="../../../../../README.md">다른파일</a>
+
+    <!-- 이메일/전화 : PC내의 메일이나 통화 프로그램이 있을경우 해당 프로그램을 통해 이메일(mailto)/전화(tel) 를 할수 있도록 해줌  
+                    메일주소 앞에는 꼭 mailto 전화 앞에는 tel 을 적어주어야 연결이 된다. 그냥 쓸경우엔 작동 안함 
+
+        ex: <a href="mailto:sol.reshur@gmail.com"> Send me E-Mail</a> 
+            <a href="tel:123-456-789">Call Me </a> -->
+
+    <a href="mailto:sol.reshur@gmail.com">Send me E-Mail</a>
+    <a href="tel:123-456-789">Call Me </a>
+
+    <pre>
+    <code>&lt;a href="mailto:sol.reshur@gmail.com"&gt;Send me E-Mail&lt;/a&gt;</code>
+    <code>&lt;a href="tel:123-456-789"&gt;Call Me &lt;/a&gt;</code>
+    </pre>
+    <h3>속성 : target</h3>
+    <!-- <target> 태그는 링크한 URL를 표시할 위치를 정할때 사용한다.  
+                  _self : URL을 현재 브라우저에서 표시한다 기본값  > 현재 열려있는 페이지에서 이동함 
+                  _blank : URL을 새 탭(새 창)에서 열린다. 
+                  ex: <a href="http://www.mozilla.com" target="_blank">Mozilla</a>-->
+
+    <pre>
+  &lt;a href="http://www.mozilla.com" <mark>target="_self"</mark>&gt;혹은 기재안함 : 현재 페이지에서 이동한다.기본값이므로, 기재안하더라도 상관없음
+  &lt;a href="http://www.mozilla.com" <mark>target="_blank"</mark>&gt; : 새 탭/창 에서 페이지가 열린다.
+
+  <a href="http://www.mozilla.com"target="_self">_self적용한것</a>
+  <a href="http://www.mozilla.com"target="_blank">_blank적용한것</a>
+
+</pre>
+  </body>
+</html>
