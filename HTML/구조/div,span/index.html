@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div {
+        background-color: yellow;
+      }
+      span {
+        background-color: pink;
+      }
+    </style>
+    <title>Div&span</title>
+  </head>
+  <body>
+    <!-- div: division의 앞글자를 따서 div 이며, 특정 구역이나 구획을 분할하거나 묶을때 사용한다.
+              컨테이너이기 때문에 내용없이 단독으로 사용했을경우엔 아무것도 표시되지 않는다.
+              다른 태그엔 각 태그만의 의미가 있지만 div는 아무 의미 없는 태그이며 그렇게 때문에 Class나 id를 이용하여 스타일링을 줄수있다. 
+              div는 block 요소이기 때문에  해당 줄의 전체를 사용한다.   
+              ** block 요소의 최대 가로폭은 부모(상위)요소를 따라간다. 
+            -->
+    <h1>div</h1>
+    <div>Lorem ipsum dolor</div>
+
+    <!-- span: div와 동일한 성질을 가지고 있지만, 차이점은 span 은 inline 컨테이너이며 구문컨텐츠를 담기떄문에
+               대부분 텍스를 꾸밀때 사용한다.
+              ** inline 요소의 최대 가로폭은 컨텐츠의 길이 이다.
+            -->
+    <h1>span</h1>
+    <span>deleniti</span>
+    <span>deleniti</span>
+    <span>deleniti</span>
+    <span>deleniti</span>
+
+    <h1>block 요소와 inline 요소의 차이</h1>
+
+    <span>Lorem ipsum dolor</span>
+    <span>Lorem ipsum dolor</span>
+    <div>Lorem ipsum dolor</div>
+    <span>Lorem ipsum dolor</span>
+    <span>Lorem ipsum dolor</span>
+  </body>
+</html>

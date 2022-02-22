@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Web</title>
+    <style>
+      header {
+        display: flex;
+        flex-direction: row;
+      }
+      img {
+        margin: 30px 10px 0px 10px;
+      }
+      p {
+        margin-left: 10px;
+        padding: 10px;
+      }
+
+      nav {
+        background-color: rgb(255, 227, 166);
+      }
+      article {
+        background-color: rgb(255, 255, 138);
+      }
+      aside {
+        background-color: rgb(166, 255, 166);
+        width: 40%;
+        float: right;
+        box-shadow: inset 5px 0 5px -5px rgb(0, 75, 19);
+        font-style: italic;
+        color: #29627e;
+        font-size: 10px;
+      }
+      footer {
+        background-color: rgb(97, 97, 245);
+        color: white;
+      }
+      cite {
+        background-color: rgb(226, 168, 226);
+        color: white;
+        font-size: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: red;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        semantic web이란?
+        semantic:의미의, 의미론적인 이라는 뜻으로 
+        요소의 의미를 고려하여 구조를 설계하고 작성한 코드를 말한다.
+        
+        semantic web으로 해야 하는 이유는
+        1. 검색엔진은 의미론적인 (semantic) 마크업을 분석하여 페이지의 검색 결과에 표시할 키워드를 나타낸다.
+        2. 스크린리더를 사용하여 페이지를 탐색할 경우 의미론적인 (semantic) 마크업을 푯말로 사용할 수 있다.(웹 접근성)
+        3. 해당 태그 부분에 넣을 데이터유형을 나타낼 수 있다.
+        4. 의미가 없는 <div>로만 작성된 코드보다 의미 있는 코드 블록으로 만들 경우 알아보기 쉽다. (가독성)
+
+
+          - header:<header> / <div>와 동일한 block요소이며, 
+                              소개 및 탐색에 도움을 주는 컨텐츠 이며 제목, 로고, 검색폼, 작성자 이름 등이 요소로 포함된다.
+                              전체 웹 페이지의 하나만 사용해야한다. <header>는 플로우 컨텐츠이지만
+                              <header>내에 또 다른 <header> 나 <footer>를 넣을 수 없다.
+                              페이지 제목, 글 제목 또는 논문이나 기사 등 한가지 단위의 글을 제목으로 나타날 때도 사용할 수 있다.
+                              
+          - navigation: <nav> / 문서의 부분 중 현재 페이지가 어디/어느 위치에 있는지 알려주는 역할을 하거나,
+                                다른 페이지로의 링크를 보여주는 구획을 나타낸다.
+                                주로 메뉴, 목차, 색인 등을 나타낼 때 사용하며, 목록의 형태로 나타낸다.
+                                <nav>는 현재 페이지를 기준으로 상위, 하위 혹은 페이지 내의 영역을 나타내기 때문에 
+                                <footer>와는 성격이 다르다.
+
+          - main content : <main> / <body> 의 주요 컨텐츠를 나타내며, 유일무이한 태그이며 하나 이상을 써야 할 경우
+                                    주요 컨텐츠 외의 부분은 <hidden> 을 사용하여 눈에 보이지 않게 해야 한다. (접근성과 관련 있음)
+                                    대부분 브라우저에선 지원하나 Internet Explore에서는 지원을 하지 않는다.
+                                    Internet Explore 11 이하에서 작동해야 할경우 
+                                    
+                                    <main role="main">
+                                    </main> 
+                                    
+                                    을 사용해야한다.
+
+            - article: <article> / 문서, 페이지, 애플리케이션 또는 사이트안에서 독립적으로 표시하거나 재사용 할 수 있는 구획을 말한다.
+                                  기사 속의 <article>(기사 본문)의 내용을 블로그나 게시판 등에 넣어도
+                                  내용을 알 수 있는 것을 생각하면 이해하기 쉽다.
+                                  꼭, 해당 웹페이지가 아니어도 재사용해도 내용을 이해하는 것에 문제없다.
+                                  하나의 웹페이지에 여러 개의 <article>을 넣을 수 있으며,
+                                  <article> 안에 여러 개의 <section> 을 넣을 수 있고 반대로 <section>안에 여러 <article>을
+                                  넣을 수 있다.
+
+                                  [제목]
+                                  [본문]
+                                  [댓글란]  
+
+                                  으로 구분했을 때 댓글란을 <section> 으로, 그안의 여러 개의 댓글들을 <article>로 볼 수 있다.
+                                  <article> 자체가 단독의 컨텐츠가 될 수 있기에 <header> 나 <footer>모두 사용할 수 있다.
+                                  그렇기에, 각각의 <article>을 식별할 수 있는 제목(<h1>~<h6>) 요소를 사용한다.
+
+           - section: <section> / <article> 과 <section>은 비슷하지만 다르다.
+                                  <article> 과 다르게 제목요소( h1~h6 )는 필수요소가 아니며, 전체글의 흐름에서 문맥적으로 호흡이 끊길떄 사용한다.
+                                  <article> 과 <section>을 쉽게 구분하는 방법은 <article>이 될수있다면 <article>로 쓰고 아니면 <section>으로 쓴다.
+                                  요소의 컨텐츠를 따로 구분해야할 필요하가 있다면 <article>을 써야한다.
+                                  일반 컨테이너로 사용하면 안되며 단순 스타일링만을 할땐 <div>를 사용한다.
+                                  
+          - sidebar:<aside> / 문서의 주요 내용과 간접적으로 연관된 부분을 나타낼 때 사용한다. 
+                              문서 중 단어에 대해 추가설명을 할때 사용하거나, 블로그 등에 광고 등을 넣을때도 사용한다.
+                              <aside> 가 없다고 해서 문제되지 않으며 주로 사이드바 혹은 콜아웃 박스라고 부른다.
+
+          - footer : <footer> / <footer>는 모든 웹 페이지마다 동일하게 들어가며
+                                주로 전체 페이지를 아우를 수 있는 링크들을 넣거나 저작권 정보, 관련문서, 구획의 작성자 등을 넣는다.
+                                플로우 컨텐츠를 허용하는 모든 요소들을 넣을수 있으나,
+                                <address>,<header> 혹은 다른 <footer>는 넣을 수 없다.
+                                
+
+          -->
+
+    <p>&lt;header&gt; 예시 : 이미지 파일을 넣을 수 있다.</p>
+
+    <header>
+      <img
+        src="../../../../images/Reshur_logo.png"
+        width="40px"
+        height="20px"
+        alt="Reshur_logo"
+      />
+      <h1>header - 웹/글의 제목을 맡고 있습니다.</h1>
+    </header>
+    <p>&lt;nav&gt; 예시</p>
+    <nav>
+      <p>Navigation - 메뉴영역 입니다.</p>
+      <ul>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </ul>
+    </nav>
+    <p>
+      &lt;main&gt;&nbsp;&amp;&nbsp;&lt;article&gt;&nbsp;&amp;&nbsp;&lt;aside&gt;&nbsp;예시
+    </p>
+    <main>
+      <article>
+        <p>
+          Main - 본문 입니다.&lt;article&gt; 예시이죠. <br />
+          &lt;article&gt; 과 &lt;aside&gt;는 &lt;main&gt; 안에 들어 있습니다.
+        </p>
+        <aside>
+          <p>
+            사이드바 영역 입니다.&lt;aside&gt; 예시이죠.<br />
+            &lt;article&gt;내에 있습니다.<br />
+            CSS로 스타일링을 하지 않으면 같은 구문으로 보입니다.<br />
+            현재 이 영역은 CSS로 스타일을 주었습니다.
+          </p>
+        </aside>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque,
+          harum. Alias quo aspernatur distinctio! Voluptate consequatur eos sed,
+          exercitationem, quaerat corrupti minima natus quasi voluptates
+          repudiandae dolore dolorem inventore illum! Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Beatae amet commodi nulla, iure
+          repudiandae iusto fugit dolorum rem, cupiditate sed ex excepturi
+          impedit ullam perferendis quos dolores minima itaque sunt.
+        </p>
+      </article>
+    </main>
+    <p>&lt;footer&gt; 예시 입니다.</p>
+    <footer>
+      <p>Footer</p>
+
+      <p>© 2022 Copyrights by Reshur</p>
+      <a href="#" target="_blank">Home</a>
+    </footer>
+
+    <cite>
+      참고:
+      https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
+    </cite>
+  </body>
+</html>
