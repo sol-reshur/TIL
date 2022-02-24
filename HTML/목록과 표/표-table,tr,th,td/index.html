@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표 - table,tr,th,td</title>
+    <style>
+      tr {
+        background-color: #d7d9f2;
+        text-align: center;
+      }
+      td {
+        background-color: #95dafb;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <table> : 행과 열로 이루어진 표를 말한다. 복잡한 데이터의 형식을 보기좋게 표시할때 사용한다.
+                  스타일링을 주지않은 <table>은 테두리가 없다. (선이 없다.)
+
+            <tr> : The Table Row - 행(가로)
+
+            <th> : The Table Header - 어떠한 행이나 열을 대표하는 것을 나타낼때 사용함
+                   <scope(범위)> 라는 속성을 사용할수 있는데, 무언가를 명시할때 사용한다.
+                          col (열 - 세로) - column의 줄인말   row(행 - 가로)  <th scope="col">
+                   scope를 사용했을때 특별한 기능이나 스타일링이 추가되는것은 아니고, 스크린리더 등을 사용할때 어떤것을 대표하는것인지
+                   나타나기 위한 것이다. (접근성을 위한 것)
+
+            <td> : The Table Data
+                   속성으로 colspan 과 rowspan 이 있는데, 해당 위치부분을 포기한다는 의미로 행이나 열을 합쳐서 표시할때 사용한다.
+                   colspan 은 열을 합칠때, rowspan은 행을 합칠때 사용하는데 막상 표시가 될때는
+                   colspan은 가로로 합쳐지고 rowspan은 세로로 합쳐진다.
+
+                   정확한 이유를 찾으려고 여러 사이트와 포스트를 검색했으나 왜 그런지에 대한 내용은 없었다.
+                   개인적인 생각으론
+                   colspan을 사용할때 <tr>- Table Row 를 기준으로 열을 지정하기 때문인것 같다.
+                     
+                   예시로 하단의 표를 작성했을때 <tr>테이블의 행의 3번째 열을 합친다 라는 개념으로 colspan을 썼을때 원했던 결과가
+                   나온다.
+    -->
+
+    <table>
+      <tr>
+        <th scope="col">과일</th>
+        <th scope="col">색상</th>
+        <th scope="col">계절</th>
+      </tr>
+      <tr>
+        <td scope="row">딸기</td>
+        <td scope="row">빨간색</td>
+        <td scope="row">봄</td>
+      </tr>
+      <tr>
+        <td scope="row">사과</td>
+        <td scope="row">빨간색</td>
+        <td scope="row">가을</td>
+      </tr>
+      <tr>
+        <td>결론:</td>
+        <td colspan="3">모두 맛있다!</td>
+      </tr>
+    </table>
+  </body>
+</html>
