@@ -1,3 +1,7 @@
 # TIL - Today I Learned
 
-# 사용기술
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript </li>
+ </ul>
