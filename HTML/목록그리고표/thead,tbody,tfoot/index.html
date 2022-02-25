@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  각의 t 는 table의 t 이다. 
+        <thead> : <table> 의 바로 아래로 들어가야한다. 표준에 의하여 <thead>의 형제요소로는 <tbody>, <tfoot> 만 가능하다.
+                  여러개의 <tbody>를 가질수있다.
+
+   -->
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">품목</th>
+          <th scope="col">지출</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">율무</th>
+          <td>300,000</td>
+        </tr>
+        <tr>
+          <th scope="row">유자</th>
+          <td>10,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">합계</th>
+          <td>310,000</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

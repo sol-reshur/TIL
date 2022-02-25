@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "Cafe24SsurroundAir";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      header {
+        color: #9071ff;
+        text-align: center;
+        font-family: "Cafe24SsurroundAir";
+        padding: 10px 0px 10px 0px;
+      }
+      article {
+        border: 1px solid orange;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 10px;
+        margin-left: 10px;
+      }
+      img {
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      
+      <img> :  이미지를 첨부할때 사용하는 태그 이며, 빈요소 이다.
+               * src(source) 특성은 필수이며, 포함하고자 하는 이미지의 경로(상대경로) 혹은 url(절대경로)을 지정할때 사용한다.
+               * alt 특성은 이미지의 텍스트 설명을 할때 사용하며, 필수 특성은 아니나 스크린 리더를 사용할때 alt의 값을 읽어 사용자에게
+                 이미지를 설명하므로, 웹접근성 차원에서 유용한 특성이다.
+                 또한, 네트워크 오류이거나 컨텐츠 차단 등 이미지를 표시할수 없을때 이 속성의 값을 대신 표시한다.
+
+     -->
+    <header>
+      <h2>Image 불러오기</h2>
+    </header>
+    <article>
+      <h3>
+        상대 경로 - 현재 위치를 기준으로 하며, 위치가 다를 경우 같은 데이터여도
+        표시가 다를 수 있다.
+      </h3>
+      <img src="../../../images/Reshur_logo.png" width="50px" height="20px" />
+
+      <p>
+        &lt;img src="../../../images/Reshur_logo.png" /&gt; <br />
+        <b>img src="이미지가 있는 경로"</b>
+      </p>
+    </article>
+
+    <article>
+      <h3>
+        절대 경로 - 어떤 환경에서 데이터를 실행해도 동일한 데이터를 나타낸다.
+      </h3>
+      <img
+        src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2TP21%2Fbtruh6EP0NV%2F20Z9gc4Izw6HrG4JUNIXm1%2Fimg.png"
+        width="50px"
+        height="20px"
+      />
+
+      <p>
+        &lt;img
+        src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2TP21%2Fbtruh6EP0NV%2F20Z9gc4Izw6HrG4JUNIXm1%2Fimg.png"&gt;
+        <br />
+        <b>img src="이미지 URL" 로 작성한다.</b>
+      </p>
+    </article>
+  </body>
+</html>

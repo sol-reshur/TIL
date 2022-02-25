@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        <caption> : 표의 전체를 아우를수 있는 설명이나 부가적인 설명을 추가하고 싶을때 사용한다.
+                    <figure>와 다르게 table에 들어가는 요소이며 table을 설명하기 위해서만 사용함 
+                    <table>의 바로 아래에 들어가며, 별도의 스타일링이 없을경우엔 중앙에 정렬된다.
+                    만약에 <tr>으로 구획을 나누었다면 맨 앞에 <caption>을 사용해야 하며
+                    <thead>로 구획을 나누었을 경우 <thead> 앞에 넣어야한다.
+                    위치조정을 하려면 CSS를 이용하여 변경해야한다.
+
+                    <caption>을 넣은 <table>가 <table>이 아닌 것에 설명을 붙이고 싶을경우엔 
+                    <figure>로 감싸서 <figcaption>을 사용해야한다.
+
+     -->
+
+    <table>
+      <caption>
+        Example Caption
+      </caption>
+      <tr>
+        <th>Login</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>user1</td>
+        <td>user1@sample.com</td>
+      </tr>
+      <tr>
+        <td>user2</td>
+        <td>user2@sample.com</td>
+      </tr>
+    </table>
+  </body>
+</html>

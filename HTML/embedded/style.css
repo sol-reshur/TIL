@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Cafe24Oneprettynight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Cafe24Oneprettynight";
+  font-weight: normal;
+  font-style: normal;
+}
+content {
+  background-color: #e5eaec;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+article {
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid #e5eaec;
+  border-radius: 5px;
+}
+table {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e5eaec;
+}
+caption {
+  padding: 10px;
+  font-weight: bold;
+}
+th {
+  font-weight: bold;
+  border: 1px solid #e5eaec;
+  padding: 5px;
+}
+td {
+  text-align: center;
+  border: 1px solid #e5eaec;
+  padding: 5px;
+  font-size: 10px;
+  font-family: "Helvetica Neue";
+}
+.style {
+  background-color: #e5eaec;
+  font-family: "Helvetica Neue";
+  text-align: center;
+}
