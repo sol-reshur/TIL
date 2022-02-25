@@ -20,6 +20,16 @@
         <caption>
           웹에서 사용하는 이미지 유형
         </caption>
+        <div id="explainBox">
+          <div class="explainRaster">
+            Raster(래스터): 많은 양의 픽셀(pixel)이 모여 하나의 이미지를
+            구성하는 방식
+          </div>
+          <div class="explainVector">
+            Vector(벡터): 점과 점을 연결해 수학적 원리로 그림을 그려 표현하는
+            방식
+          </div>
+        </div>
         <tr>
           <th scope="col">약어</th>
           <th scope="col">미디어 타입</th>
@@ -27,7 +37,7 @@
           <th scope="col">요약</th>
         </tr>
         <tr>
-          <th scope="row">JPEG</th>
+          <th scope="row" class="explainRaster">JPEG</th>
           <td class="style">image/jpeg</td>
           <td class="style">.jpg, .jpeg, .jfif, .pjpeg, .pjp</td>
           <td>
@@ -36,31 +46,31 @@
           </td>
         </tr>
         <tr>
-          <th scope="row">PNG</th>
+          <th scope="row" class="explainRaster">PNG</th>
           <td class="style">image/png</td>
           <td class="style">.png</td>
           <td>
             원본 이미지를 보다 정확하게 보여주거나.<br />
-            투명도가 필요할 경우에 사용한다.
+            투명도가 필요할 경우에 사용한다. 지원되는 화질컬러 범위가 적다.
           </td>
         </tr>
         <tr>
-          <th scope="row">GIF</th>
+          <th scope="row" class="explainRaster">GIF</th>
           <td class="style">image/gif</td>
           <td class="style">.gif</td>
           <td>여러장의 이미지로 애니메이션 표현할때 사용</td>
         </tr>
         <tr>
-          <th scope="row">WEBP</th>
+          <th scope="row" class="explainRaster">WEBP</th>
           <td class="style">image/webp</td>
           <td class="style">.webp</td>
           <td>
             구글이 만든 이미지 포맷으로 JPEG를 대체하기 위해 제시된 규격이다.<br />
-            화질,압축률 등 우수하나 지원 브라우저가 제한적이다.
+            화질,압축률 등 우수하나 지원 브라우저가 제한적이다.**
           </td>
         </tr>
         <tr>
-          <th scope="row">SVG</th>
+          <th scope="row" class="explainVector">SVG</th>
           <td class="style">image/svg+xml</td>
           <td class="style">.svg</td>
           <td>
@@ -69,6 +79,10 @@
           </td>
         </tr>
       </table>
+      <p class="botExplain">
+        ** Can I Use : https://caniuse.com/ : 다양한 태그,CSS 나 webp가
+        지원하는지 여부를 알수 있는 사이트
+      </p>
     </article>
   </body>
 </html>

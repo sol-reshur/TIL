@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video</title>
+  </head>
+  <body>
+    <!-- 
+
+        <video> : 영상을 첨부할때 사용하는 태그이며 <img>와 같이 src 를 사용하지만
+                  <img>와 다르게 빈요소가 아니며 태그안에 하위요소를 넣을 수 있다.
+                  그 이유는 브라우저가 <video>요소를 지원하지 않을때 하위요소를 보여주기 때문이다.
+
+                    - src : 첨부할 동영상 주소(url)을 넣을때 사용하지만 <img>와 다르게 선택사항이다.
+                            그 이유는 <video>에는 하위요소를 넣을수 있기때문에 <video> 에 직접 넣기보다는 
+                            <source> 에 src 를 사용헌다. <video> 에 넣어도 상관없다.
+                    
+                    - controls : 음량조절, 동영상 이동 ,일시정지/시작 등을 할 수 있는 컨트롤러 태그이다.
+                                기본값이 false 이기애 controls 없이 <video>만 넣었을때는 동영상이 반응하지 않는다.
+                                <video controls> 로 사용한다.
+
+                    - autoplay : 기본값이 false 이므로, controls 와 동일하게 <video autoplay> 로 작성하며
+                                 영상을 자동으로 실행할때 사용한다. 
+                                 하지만 소리가 있는 영상일 경우엔 자동으로 실행이 되지않는다.
+                                 
+                                 그 이유는 웹페이지를 표시하자마자 소리가 갑자기 나면 사용자 경험에 좋지 않기때문에 
+                                 웹페이지에서 막는 경우가 있다. 만약 자동으로 영상을 실행하고 싶을 경우 음소거를 한상태에서 재생하면 된다.
+                                 muted 특성을 사용하면 된다.
+                                 <video autoplay muted>
+
+                                - loop : 특성을 사용할경우 영상이 끝나면 처음부터 다시 실행된다. 기본값 false
+                                <video autoplay muted loop>
+                                - poster : 섬네일 지정할때 사용 video에 넣는다.
+                        
+     -->
+
+    <h2>Video</h2>
+
+    <video controls width="300">
+      <source src="/video/Sample-MP4-Video-File-for-Testing.mp4" />
+      Sorry, your browser doesn't support embedded videos
+    </video>
+  </body>
+</html>

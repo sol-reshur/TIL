@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+        sizes : 소스 크기를 나타내는 태그이며, srcset과는 다른 특성을 가졌다.
+              
+              1. 소스 크기 값을 지정
+              2. 미디어 조건(viewport 속성을 가리킨다.)
+
+              min-width(최소 가로값) : (작성한 값보다 큰 값을 가진 유저가 대상) 해당 대상자에게 보여질 고정된 사이즈
+              max-width(초대 가로값) 
+     -->
+
+    <img
+      src="/images/small.png"
+      srcset="
+        /images/small.png  300w,
+        /images/medium.png 450w,
+        /images/large.png  600w
+      "
+      sizes="(min-width: 600px) 600px,
+            (min-width: 450px) 450px
+      "
+    />
+  </body>
+</html>

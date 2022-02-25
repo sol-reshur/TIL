@@ -49,3 +49,22 @@ td {
   font-family: "Helvetica Neue";
   text-align: center;
 }
+#explainBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+.explainRaster {
+  color: red;
+  font-size: 10px;
+}
+.explainVector {
+  color: blue;
+  font-size: 10px;
+}
+.botExplain {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  text-align: right;
+}
